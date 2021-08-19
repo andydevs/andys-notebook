@@ -1,2 +1,3 @@
-# andys-notebook
- My Jupyter notebooks created for exploration and education
+# Andys Notebook
+
+My Jupyter notebooks created for exploration and education
