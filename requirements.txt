@@ -81,6 +81,7 @@ testpath==0.5.0
 tifffile==2021.7.2
 tones==1.2.0
 tornado==6.1
+tqdm==4.62.3
 traitlets==5.0.5
 urllib3==1.26.6
 voila==0.2.10
