@@ -86,6 +86,7 @@ tqdm==4.62.3
 traitlets==5.0.5
 urllib3==1.26.6
 voila==0.2.10
+Wave==0.0.2
 wcwidth==0.2.5
 webencodings==0.5.1
 websocket-client==1.2.1
