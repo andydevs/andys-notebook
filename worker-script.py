@@ -5,20 +5,32 @@ Find nth prime number and write to text file
 """
 from sys import argv, exit
 
-# We need a number
+# Help message
+help_message = '$ python worker-script.py number [number...]'
+
+# We need at least one number
 if len(argv) < 2:
-    print('ERROR: Number not specified!')
-    print('$ python worker-script.py number')
+    print('ERROR: At least one number must be specified!')
+    print(help_message)
     exit(1)
     
-# Get number n
-n = int(argv[1])
+# Get numbers n
+ns = [int(n) for n in argv[1:]]
 
-# Make sure n >= 1
-if n < 1:
-    print('ERROR: Number must be >= 1, got:', n)
-    print('$ python worker-script.py number')
-    exit(1)
+# Make sure all ns > 1
+for n in ns:
+    if n < 1:
+        print('ERROR: All numbers must be >= 1! got:', n)
+        print(help_message)
+        exit(1)
+        
+# Get maximum n value from ns
+# If we discover all primes up 
+# to this number, we then have
+# implicitly discovered all nth 
+# primes for n < max n. So we 
+# can filter for those
+n = max(ns)
 
 # Allocate array for prime numbers
 primes = [2]
@@ -50,5 +62,5 @@ while len(primes) < n:
     # Increment k
     k += 1
 
-# Print latest prime found
-print(primes[-1])
+# Print the nth primes for all ns
+print(*(primes[n - 1] for n in ns), sep='\n')
