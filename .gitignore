@@ -116,3 +116,6 @@ dmypy.json
 # MacOS stuff
 .DS_Store
 data/.DS_Store
+
+# Andy's notebook
+scratchpaper/
