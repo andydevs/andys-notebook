@@ -18,3 +18,4 @@ tqdm
 python-dotenv
 paramiko
 linode-api4
+opencv-python
