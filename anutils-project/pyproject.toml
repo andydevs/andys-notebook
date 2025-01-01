@@ -1,0 +1,14 @@
+[project]
+name = "anutils"
+authors = [{name = "andydevs", email = "akanshul97@gmail.com"}]
+version = "0.1.0"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "clifford @ https://github.com/andydevs/clifford/archive/refs/heads/andys-awesome-branch.zip"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest"
+]

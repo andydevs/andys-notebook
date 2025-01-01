@@ -1,21 +1,25 @@
+clifford @ https://github.com/andydevs/clifford/archive/refs/heads/andys-awesome-branch.zip
+-e ./anutils-project
 beautifulsoup4
 ipympl
 ipywidgets
+ipycanvas
 jupyter
 jupyterlab
 jupyterlab-git
 matplotlib
 notebook
 numpy
+opencv-python
+paramiko
 pandas
 Pillow
+python-dotenv
 requests
 scikit-image
 scipy
 sympy
 tensorflow[and-cuda]
 tqdm
-python-dotenv
-paramiko
-linode-api4
-opencv-python
+typing_extensions>=4.6.1
+voila
