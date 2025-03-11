@@ -17,6 +17,7 @@ Pillow
 python-dotenv
 requests
 scikit-image
+scikit-optimize
 scipy
 sympy
 tensorflow[and-cuda]
