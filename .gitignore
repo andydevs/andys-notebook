@@ -121,3 +121,7 @@ data/.DS_Store
 scratchpaper/
 **/*.mp4
 data/frames/
+
+*.jupyterlab-workspace
+
+.jupyter/desktop-settings.json
