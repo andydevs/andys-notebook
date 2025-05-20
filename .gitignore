@@ -125,3 +125,4 @@ data/frames/
 *.jupyterlab-workspace
 
 .jupyter/desktop-settings.json
+**/media/videos

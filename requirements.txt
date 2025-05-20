@@ -24,3 +24,4 @@ tensorflow[and-cuda]
 tqdm
 typing_extensions>=4.6.1
 voila
+manim==0.19.0
