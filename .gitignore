@@ -127,3 +127,4 @@ data/frames/
 .jupyter/desktop-settings.json
 **/media/videos
 notebooks/image-processing-and-computer-vision/tmp.sh
+/data/stitching-photos

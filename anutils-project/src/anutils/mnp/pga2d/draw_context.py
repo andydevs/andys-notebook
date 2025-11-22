@@ -17,16 +17,24 @@ class PGADrawContext:
     """
     Helper class for drawing PGA objects
     """
-    def __init__(self, layout, blades, width=800, height=600, debug=False, scale=None):
+    def __init__(self, layout, blades, background='white', width=800, height=600, debug=False, scale=None):
         self.layout = layout
         self.blades = blades
         self.debug = debug
         self.scale = scale
         for key,blade in self.blades.items():
             setattr(self, key, blade)
+
+        # Create canvas
         self.canvas = Canvas(width=width, height=height)
         self.canvas.layout.width = 'auto'
         self.canvas.layout.height = 'auto'
+        prev = self.canvas.fill_style
+        self.canvas.fill_style = background
+        self.canvas.fill_rect(0,0, width, height)
+        self.canvas.fill_style = prev
+
+        # Set up screen space tools
         self.ps_2_px = np.gcd(width, height)
         d = (DEBUG_GUTTERS if self.debug else 0.0)
         self.bounds = cl.array([
@@ -40,6 +48,8 @@ class PGADrawContext:
             self.e2 - self.e0*height/2
         ])
         self.origin = self.x_axis ^ self.y_axis
+
+        # Debug output
         if self.debug:
             self.canvas.stroke_line( d, 0, d, height )
             self.canvas.stroke_line( width - d, 0, width - d, height )
