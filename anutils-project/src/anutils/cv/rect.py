@@ -1,9 +1,9 @@
 import numpy as np
 
-def rect(w, h, tr=(0,0)):
-    tr = np.array([*tr])
+def rect(w, h, tl=(0,0)):
+    tl = np.array([*tl])
     sizes = np.array([[w,h]])
-    return tr + rects(sizes)[0,:,:]
+    return tl + rects(sizes)[0,:,:]
 
 def rects(sizes):
     rect_indeces = [[0,0],[1,0],[1,2],[0,2]]

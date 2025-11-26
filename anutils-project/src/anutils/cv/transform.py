@@ -29,4 +29,4 @@ identity = np.array([
     [1,0,0],
     [0,1,0],
     [0,0,1]
-])
+], dtype=np.float32)

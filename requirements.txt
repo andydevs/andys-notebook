@@ -9,6 +9,7 @@ jupyterlab
 jupyterlab-git
 matplotlib
 notebook
+networkx
 numpy
 opencv-python
 paramiko
